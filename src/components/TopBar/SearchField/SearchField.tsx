@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import styled from 'styled-components';
-import {FontSize} from "./../../../../styledHelpers/FontSize";
+import {FontSize} from "../../../styledHelpers/FontSize";
 
 const Wrapper = styled.fieldset`
   position: relative;
@@ -29,8 +29,9 @@ const SearchIcon = styled.button`
   border: none;
   position: absolute;
   background-size: cover;
+  outline: none;
   :hover {
-          cursor: pointer;
+    cursor: pointer;
   }  
 `;
 

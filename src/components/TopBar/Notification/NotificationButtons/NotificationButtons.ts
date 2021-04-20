@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Colors} from "../../../../../styledHelpers/Colors";
+import {Colors} from "../../../../styledHelpers/Colors";
 
 export const NotificationButtons = styled.a`
   img {

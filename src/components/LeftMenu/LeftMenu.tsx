@@ -104,8 +104,8 @@ const Links = styled.div`
 `;
 
 const LinkIcon = styled.div`
-margin-top:10px;
- img{
+    margin-top:10px;
+    img{
         width:40px;
         height:40px;
         margin-left:10px;
@@ -121,8 +121,16 @@ margin-top:10px;
         font-size: ${FontSize[24]};
     }
 `;
-
-
+const ColoredLine = ({color} : {color: string}) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 1,
+            width: '99.4%'
+        }}
+    />
+);
 
 const LeftMenu: FC = () => {
     return( 
@@ -137,7 +145,7 @@ const LeftMenu: FC = () => {
                     <p>Job title - Company</p>
                 </Occupation>
             </Profile>         
-            ______________________________________
+            <ColoredLine color="black" />
             <ProfileButtons> 
                 <Icon><img src="./icons/network.png" alt='network icon'></img></Icon>
                 <Text>Your Network</Text>

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import useDropdown from 'react-dropdown-hook';
 import styled from "styled-components";
-import {FontSize} from "./../../../../styledHelpers/FontSize";
+import {FontSize} from "../../../styledHelpers/FontSize";
 import ToggledMenu from "./ToggledMenu/ToggledMenu";
 
 const ClickBar = styled.div`
@@ -10,7 +10,6 @@ const ClickBar = styled.div`
     height:50px;
     margin-top:0.4%;
     z-index: 2;
-
 `;
 
 const MenuToTogge = styled.div`
@@ -23,12 +22,12 @@ const Icon = styled.div`
     width:15%;
     height:100%;
     img {
-    width: 100%;
-    height: 100%;
-  }
-  :hover {
-          cursor: pointer;
-  }  
+        width: 100%;
+        height: 100%;
+    }
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 const Text = styled.div`
@@ -45,13 +44,13 @@ const Arrow = styled.div`
     width:15%;
     height:100%;
     img {
-    width: 50%;
-    height: 100%;
-    left:0;
-    :hover {
-          cursor: pointer;
-  }  
-  }
+        width: 50%;
+        height: 100%;
+        left:0;
+        :hover {
+            cursor: pointer;
+        }  
+    }
 `;
 
  const DropDownMenu: FC = () => {
@@ -68,17 +67,13 @@ const Arrow = styled.div`
                 <Arrow>
                     <img src='./icons/arrow-down.svg' alt="Drop down menu arrow"></img>
                 </Arrow>
-
             </MenuToTogge>
             {dropdownOpen &&
                 <>
                     <ToggledMenu/>
                 </> 
             }
-            {/* <div onClick={closeDropdown}/> */}
-
         </ClickBar>
-        
 	)
 }
 export default DropDownMenu;

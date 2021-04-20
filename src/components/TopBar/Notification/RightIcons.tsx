@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {Colors} from "../../../../styledHelpers/Colors";
-import {FontSize} from "../../../../styledHelpers/FontSize";
+import {Colors} from "../../../styledHelpers/Colors";
+import {FontSize} from "../../../styledHelpers/FontSize";
 import {NotificationButtons} from "./NotificationButtons/NotificationButtons";
 
 function Notification() {
@@ -39,12 +39,12 @@ function Notification() {
               <img src="./icons/house.png" alt="Home page"/>
           </NotificationButtons>
 
-          <NotificationIcon href="/Comments">
+          <NotificationIcon href="/comments">
               <img src="./icons/comments.png" alt="Comments"/>
               <NotifyBadge>6</NotifyBadge>
           </NotificationIcon>
 
-          <NotificationIcon href="/Notifications">
+          <NotificationIcon href="/notifications">
               <img src="./icons/bell.png" alt="Notifications"/>
               <NotifyBadge>2</NotifyBadge>
           </NotificationIcon>

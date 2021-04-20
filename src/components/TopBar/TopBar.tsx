@@ -1,10 +1,9 @@
 import { FC } from 'React';
 import styled from 'styled-components';
-import SearchField from './Components/SearchField/SearchField';
+import SearchField from './SearchField/SearchField';
 import {Colors} from "../../styledHelpers/Colors";
-import RightIcons from "./Components/Notification/RightIcons";
-import DropDownMenu from "./Components/DropDownMenu/DropDownMenu";
-
+import RightIcons from "./Notification/RightIcons";
+import DropDownMenu from "./DropDownMenu/DropDownMenu";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -23,7 +22,6 @@ const Logo = styled.div`
   width: 5%;
   margin-top:0.3%;
 `;
-
 
 const TopBar: FC = () => {
     return( 
