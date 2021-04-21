@@ -5,13 +5,14 @@ import {Colors} from "../../styledHelpers/Colors";
 import TopBar from '../TopBar/TopBar';
 import  LeftMenu from "../LeftMenu/LeftMenu";
 
+
 const Wrapper = styled.section`
     background-color: ${Colors.lightBlue};
 `;
 
 const Content = styled.div`
     max-width: 100%;
-    height:1000px;
+    height:100%;
     align-items: center;
 `;
 
