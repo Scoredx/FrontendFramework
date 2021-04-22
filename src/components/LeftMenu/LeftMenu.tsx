@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   height: 500px;
   display: flex;
   margin-left:3%;
-  margin-top:1%;
+  margin-top:20px;
   border-radius:2%;
   flex-direction: column;
   z-index: 1;

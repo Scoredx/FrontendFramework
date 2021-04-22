@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Colors} from "../../../../styledHelpers/Colors";
 
-export const NotificationButtons = styled.a`
+const NotificationButtons = styled.a`
   img {
     max-width: 25px;
     height: 25xp;
@@ -20,3 +20,5 @@ export const NotificationButtons = styled.a`
   justify-content: center;
   align-items: center;
 `;
+
+export default NotificationButtons;

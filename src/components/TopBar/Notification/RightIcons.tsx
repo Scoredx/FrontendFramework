@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import {Colors} from "../../../styledHelpers/Colors";
 import {FontSize} from "../../../styledHelpers/FontSize";
-import {NotificationButtons} from "./NotificationButtons/NotificationButtons";
+import NotificationButtons from "./NotificationButtons/NotificationButtons";
 
 function Notification() {
 
   const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    margin-top: 0.6%;  
+    margin-top: 14px;  
     width: 28%;
     display: flex;
     justify-content:flex-end;

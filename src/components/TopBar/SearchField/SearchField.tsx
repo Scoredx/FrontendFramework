@@ -5,7 +5,7 @@ import {FontSize} from "../../../styledHelpers/FontSize";
 const Wrapper = styled.fieldset`
   position: relative;
   width: 40%;
-  margin-top: 0.5%;
+  margin-top: 10px;
 `;
 
 const Input = styled.input`

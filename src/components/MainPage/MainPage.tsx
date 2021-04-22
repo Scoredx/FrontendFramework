@@ -4,6 +4,7 @@ import {Colors} from "../../styledHelpers/Colors";
 
 import TopBar from '../TopBar/TopBar';
 import  LeftMenu from "../LeftMenu/LeftMenu";
+import Center from '../Center/Center';
 
 
 const Wrapper = styled.section`
@@ -12,16 +13,18 @@ const Wrapper = styled.section`
 
 const Content = styled.div`
     max-width: 100%;
-    height:100%;
-    align-items: center;
+    height:1550px;
+    display:flex;
+    justify-content:center;
 `;
 
 const MainPage: FC = () => {
     return ( 
         <Wrapper>
-            <TopBar />
+            <TopBar/>
             <Content>
-                <LeftMenu />
+                <LeftMenu/>
+                <Center/>
             </Content>
         </Wrapper>
     );
