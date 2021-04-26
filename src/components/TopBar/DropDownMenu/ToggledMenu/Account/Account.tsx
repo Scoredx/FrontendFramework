@@ -5,23 +5,23 @@ import { FontSize } from "../../../../../styledHelpers/FontSize";
 
 const Wrapper = styled.div`
     width:100%;
-    height:150px;
+    height:152px;
     display: flex;
     flex-direction: column;
     font-family: Tahoma;
-    p{
+    #Account{
         margin-left:10px;
-        margin-top:5px;
-        font-size: ${FontSize[16]}
+        margin-top:8px;
+        font-size: ${FontSize[16]};
     }
-  
 `;
 const Profile = styled.div` 
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-right: 15px;
     display:flex;
     flex-direction:row;
+    align-items:center;
     img{
         margin-top: 5px;
         height:40px;
@@ -35,7 +35,9 @@ const Profile = styled.div`
     a{
         text-decoration:none;
         font-weight: bold;
-        margin-left: 10px;
+    }
+    #NameAndLink{
+        margin-left:8px;
     }
     div{
         display:flex;
@@ -43,17 +45,51 @@ const Profile = styled.div`
     }
 `;
 
+const PrivacyAndSettings = styled.div`
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:150px;
+    #Privacy,#Settings{
+        display:flex;
+        align-items:center;
+        margin-top: 10px;
+        margin-left: 15px;
+        img{
+            height:25px;
+            margin-right:20px;
+        }
+        a{
+            text-decoration:none;
+            color: ${Colors.black};
+        }
+    }
+`;
+
 const Account: FC = () => {
 	return (
         <Wrapper>
-            <p>Account</p>
+            <p id="Account">Account</p>
+
             <Profile>
                 <img src="./icons/ecosystem.png"></img>
-                <div>
+                <div id="NameAndLink">
                     <p id="Name">Jeanne-Marie de dla cli...</p>
                     <a href="See profile">See profile</a>
                 </div>
             </Profile>
+
+            <PrivacyAndSettings>
+                <div id="Privacy">
+                    <img src="./icons/privacy.png"></img>
+                    <a href="privacy">Privacy</a>
+                </div>
+                <div id="Settings">
+                    <img src="./icons/settings.png"></img>
+                    <a href="settings">Settings</a>
+                </div>
+            </PrivacyAndSettings>
+
         </Wrapper>
 	)
 }

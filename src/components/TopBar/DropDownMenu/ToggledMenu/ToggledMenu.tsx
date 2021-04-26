@@ -13,22 +13,30 @@ const Wrapper = styled.div`
     flex-direction: column;
     font-family: Tahoma;
 
-    input{
-        height: 40px;
-        width: 98.5%;
+    #filterInput{
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        input{
+        border-radius:5px;
+        height: 35px;
+        width: 80%;
         font-size: ${FontSize[18]};
         outline:none;
+        }
     }
 `;
 
 const InnerWarpper = styled.div`
     width:100%;
     height:280px;
-    border:1px solid gray;
     display: flex;
     flex-direction: column;
     font-family: Tahoma;
     overflow-y:scroll;
+    margin-left:8px;
     a{
         text-decoration:none;
         color: ${Colors.black};
@@ -50,6 +58,7 @@ const MenuItem = styled.div`
         margin-right: 20px;
     }
     p{
+        margin: 2px 2px;
         font-size: ${FontSize[16]}
     }
 `;
@@ -60,12 +69,13 @@ const ToggledMenu: FC = () => {
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const text = e.target.value;
         setInputText(text);
-    
     }
 
 	return (
         <Wrapper>
-            <input type="text" value={inputText} onChange={inputHandler}/>
+            <div id="filterInput">
+                <input type="text" value={inputText} onChange={inputHandler} placeholder="Filter..." />
+            </div>
             <InnerWarpper>
                 <MenuItem><p>Platform</p></MenuItem>
                 {
