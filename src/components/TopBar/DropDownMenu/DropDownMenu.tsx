@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {FontSize} from "../../../styledHelpers/FontSize";
 import ToggledMenu from "./ToggledMenu/ToggledMenu";
 
-const ClickBar = styled.div`
+const Wrapper = styled.div`
     width:15%;
     margin-right:8%;
     height:50px;
@@ -56,7 +56,7 @@ const Arrow = styled.div`
  const DropDownMenu: FC = () => {
 	const [wrapperRef, dropdownOpen, toggleDropdown] = useDropdown();
 	return (
-        <ClickBar className='xxx' ref={wrapperRef}  >
+        <Wrapper ref={wrapperRef}  >
             <MenuToTogge onClick={toggleDropdown} className='zxcz'>
                 <Icon>               
                      <img src='./icons/house2.svg' alt="Home page" />
@@ -73,7 +73,7 @@ const Arrow = styled.div`
                     <ToggledMenu/>
                 </> 
             }
-        </ClickBar>
+        </Wrapper>
 	)
 }
 export default DropDownMenu;

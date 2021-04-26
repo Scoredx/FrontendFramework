@@ -27,7 +27,7 @@ const TopBar: FC = () => {
     return( 
         <Wrapper>
             <Logo>
-                <img src='./logo.png'alt='Logo'/>
+                <img src='./logo.png' alt='Logo'/>
             </Logo>
             <DropDownMenu />
             <SearchField />
