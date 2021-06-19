@@ -1,7 +1,11 @@
-import {FC} from "react";
+import {FC, useState} from "react";
 import styled from "styled-components";
 import { Colors } from "../../../../../styledHelpers/Colors";
 import { FontSize } from "../../../../../styledHelpers/FontSize";
+
+import { IState } from '../../../../../reducers';
+import { IUsersReducer } from '../../../../../reducers/usersReducers';
+import { useSelector } from "react-redux";
 
 const Wrapper = styled.div`
     width:100%;
@@ -27,6 +31,7 @@ const Profile = styled.div`
         height:40px;
         width:auto;
         margin-right: 10px;
+        border-radius:50px;
     }
     p{
         font-size: ${FontSize[18]};
@@ -67,15 +72,19 @@ const PrivacyAndSettings = styled.div`
 `;
 
 const Account: FC = () => {
+    const { currentUser } = useSelector<IState, IUsersReducer>(state => ({
+        ...state.users
+    }));
+
 	return (
+        
         <Wrapper>
             <p id="Account">Account</p>
-
             <Profile>
-                <img src="./icons/ecosystem.png"></img>
+                <img src={currentUser?.photo.thumbnailUrl} alt='Profile picture' />
                 <div id="NameAndLink">
-                    <p id="Name">Jeanne-Marie de dla cli...</p>
-                    <a href="See profile">See profile</a>
+                    <p>{currentUser?.name}</p>
+                    <a href="/profile">See profile</a>
                 </div>
             </Profile>
 

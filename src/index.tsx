@@ -1,13 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
+import App from './App';
+import MainPage from './Home/Homepage';
+import store from './tools/store';
+import {Provider} from 'react-redux';
 import { Reset } from 'styled-reset';
-import MainPage from './components/MainPage/MainPage';
 
 ReactDOM.render(
-  <>
+  <Provider store={store}>
     <Reset />
-    <MainPage />
-  </>,
+      <App/>
+      <MainPage />
+  </Provider>,
   document.getElementById('root')
 );

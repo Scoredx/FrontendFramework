@@ -1,6 +1,6 @@
-import { FC } from 'React';
+import { FC } from 'react';
 import styled from 'styled-components';
-import LinksUnderProfile from './Links/Links';
+import LinksUnderProfile from './LinksUnderProfile/LinksUnderProfile';
 import Profile from "./Profile/Profile";
 
 const Wrapper = styled.div`

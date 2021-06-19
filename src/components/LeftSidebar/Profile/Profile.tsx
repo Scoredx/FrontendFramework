@@ -1,7 +1,11 @@
-import { FC } from 'React';
+import { FC } from 'react';
 import styled from 'styled-components';
 import {Colors} from "../../../styledHelpers/Colors";
 import {FontSize} from "../../../styledHelpers/FontSize";
+import {useSelector} from "react-redux";
+import {IUsersReducer} from "../../../reducers/usersReducers";
+import {IState} from "../../../reducers";
+
 
 const Wrapper = styled.div`
     width: 304px;
@@ -37,7 +41,7 @@ const Name = styled.div`
 `;
 const Occupation = styled.div`
     display:flex;
-    color: ${Colors.grey};
+    color: ${Colors.gray};
     font-size: ${FontSize[18]};
     font-family: Tahoma;
     margin-top:20px;
@@ -95,12 +99,17 @@ const ColoredLine = ({color} : {color: string}) => (
 );
 
 const Profile: FC = () => {
+
+    const { currentUser } = useSelector<IState, IUsersReducer>(state => ({
+        ...state.users
+    }));
+
     return( 
             <Wrapper>      
                 <ProfileWindow>
-                    <img src="./logo.png" alt='logo'/>
+                    <img src={currentUser?.photo.thumbnailUrl} alt='Profile picture' />
                     <Name>
-                        <p>Humberta Swift</p>
+                        <p>{currentUser?.name}</p>
                     </Name>
                     <Occupation>
                         <p>Job title - Company</p>

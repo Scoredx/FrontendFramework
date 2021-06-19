@@ -9,7 +9,7 @@ const NotificationButtons = styled.a`
   }
   background-color:${Colors.white};
         :hover {
-          background-color:${Colors.lightGrey};
+          background-color:${Colors.lightGray};
   }  
   position: relative;
   display:flex;

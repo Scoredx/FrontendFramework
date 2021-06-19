@@ -4,6 +4,7 @@ import { Colors } from "../../../../styledHelpers/Colors";
 import { FontSize } from "../../../../styledHelpers/FontSize";
 import Account from "./Account/Account"
 
+
 const Wrapper = styled.div`
     width:310px;
     height:480px;
@@ -66,6 +67,7 @@ const MenuItem = styled.div`
 const ToggledMenu: FC = () => {
 
     const [inputText, setInputText] = useState<string>('');
+    
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const text = e.target.value;
         setInputText(text);
@@ -79,7 +81,7 @@ const ToggledMenu: FC = () => {
             <InnerWarpper>
                 <MenuItem><p>Platform</p></MenuItem>
                 {
-                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="publication">Home</a></MenuItem>
+                    'Home'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem ><img src='./icons/house2.png'/><a href="/">Home</a></MenuItem>
                 }
                 {
                     'Publication'.toLowerCase().includes(inputText.toLowerCase()) && <MenuItem>  <img src='./icons/publications.png'/> <a href="publication">Publication</a></MenuItem>

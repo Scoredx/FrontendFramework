@@ -12,8 +12,7 @@ const Wrapper = styled.div`
   box-shadow: 1px 1px 12px ${Colors.black};
   display: flex;
   align-items: flex-start;
-  z-index: 2;
-
+  z-index: 3;
 `;
 const Logo = styled.div`
   margin-left:2%;
