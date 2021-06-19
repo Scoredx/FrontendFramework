@@ -1,31 +1,87 @@
 import {FC} from 'react';
 import styled from 'styled-components';
 import {Colors} from "../../styledHelpers/Colors";
-import Slider from './Slider/Slider';
-import TopContainer  from './TopContainer/TopContainer';
+import { FontSize } from '../../styledHelpers/FontSize';
+import SliderDiv from './WorkspacesSlider/Slider';
+import LatestPublications  from './LatestPublications/LatestPublications';
+import BottomContainer from './ResumeYourWork/BottomContainer';
+import Workspaces from './Workspaces/Workspaces';
+import Entities from './Entities/Entities';
+import Profile from './Profile/Profile';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+  } from "react-router-dom";
 
 const Wrapper = styled.div`
-    width: 1400px;
+    width: 70%;
     height: 1000px;
     margin-left: 60px;
     margin-right: 80px;
     margin-top: 20px;
-`;
-
-const BottomContainer = styled.div`
-
-    width:100%;
-    background-color: ${Colors.grey};
-    height: 800px;
-    margin-top:10px
+    font-family: Tahoma;
+    span{
+        font-weight: 500;
+        font-size: ${FontSize[24]};
+        margin-left:15px;
+    }
 `;
 
 const Center: FC = () => {
     return ( 
-        <Wrapper>       
-            <TopContainer/>
-            <Slider/>
-            <BottomContainer/>
+        <Wrapper>
+            <Router>
+                 <Switch>
+
+                    <Route exact path="/">
+                        <LatestPublications/>
+                        <span>Workspaces</span>
+                        <SliderDiv/>
+                        <span>Resume your work</span>
+                        <BottomContainer/>
+                    </Route>
+                   
+                    <Route path="/workspace">
+                        <Workspaces/>
+                    </Route>
+
+                     <Route path="/profile">
+                        <Profile/>
+                    </Route>
+                    
+                    <Route path="/entities">
+                        <Entities/>
+                    </Route>
+
+
+                    <Route path="/publication">
+                        404
+                    </Route>
+                    <Route path="/people">
+                        404
+                    </Route>
+                    <Route path="/administration">
+                        404
+                    </Route>
+                    <Route path="/client_contract">
+                        404
+                    </Route>
+                    <Route path="/supplier_contract">
+                        404
+                    </Route>
+                    <Route path="/corporate">
+                        404
+                    </Route>
+                    <Route path="/group_norms">
+                        404
+                    </Route>
+                    <Route path="/real_estate_contracts">
+                        404
+                    </Route>
+                </Switch>    
+            </Router>
         </Wrapper>
     );
 };
