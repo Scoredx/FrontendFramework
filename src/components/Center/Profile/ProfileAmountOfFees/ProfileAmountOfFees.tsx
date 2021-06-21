@@ -25,10 +25,10 @@ const Table = styled.table`
     text-align: left;
   }
   tr{
-      line-height:22px;
+    line-height:22px;
   }
   & .header{
-      font-size: ${FontSize[20]};
+    font-size: ${FontSize[20]};
   }
   & tbody{
     button{

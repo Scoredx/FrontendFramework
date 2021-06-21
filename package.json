@@ -15,6 +15,7 @@
     "@types/styled-components": "^5.1.9",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta3",
+    "chokidar": "^3.5.2",
     "react": "^17.0.2",
     "react-bootstrap-icons": "^1.5.0",
     "react-custom-events": "^1.0.3",

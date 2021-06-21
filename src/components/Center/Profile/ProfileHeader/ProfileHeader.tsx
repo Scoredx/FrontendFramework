@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  a{
+      text-decoration:none;
+      color: ${Colors.blue};
+  }
 `;
 
 const TopButtons = styled.div`
