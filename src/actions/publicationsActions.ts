@@ -2,8 +2,8 @@ import _ from "lodash";
 import * as actionTypes from "./publicationTypes";
 import {IPublication} from "../entities/publication";
 import {Dispatch} from "redux";
-import {getPhoto} from "./photoActions";
-import {getUser} from "./usersActions";
+import {getPhoto} from "../api/photoAPI";
+import {getUser} from "../api/usersAPI";
 
 export const getLatestPublications = (): Promise<IPublication[]> => ((dispatch: Dispatch) => {
     return fetch('https://jsonplaceholder.typicode.com/posts')

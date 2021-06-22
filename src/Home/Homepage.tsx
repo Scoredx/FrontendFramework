@@ -4,10 +4,10 @@ import TopBar from '../components/TopBar/TopBar';
 import LeftMenu from "../components/LeftSidebar/LeftSidebar";
 import Center from '../components/Center/Center';
 import {Colors} from "../styledHelpers/Colors";
-import { getUsers } from '../actions/usersActions';
+import { getUsers } from '../api/usersAPI';
 import { useDispatch } from "react-redux";
 import { getLatestPublications } from "../actions/publicationsActions";
-import { getWorks } from "../actions/worksActions";
+import { getWorks } from "../api/worksAPI";
 
 const Wrapper = styled.section`
     background-color: ${Colors.lightBlue};

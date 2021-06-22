@@ -1,6 +1,6 @@
 import {IWork} from "../entities/work";
 import {Dispatch} from "redux";
-import * as actionTypes from './workTypes';
+import * as actionTypes from '../actions/workTypes';
 import store from "../tools/store";
 
 export const getWorks = (): Promise<IWork[]> => ((dispatch: Dispatch) => {

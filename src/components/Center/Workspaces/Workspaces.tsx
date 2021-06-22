@@ -4,7 +4,7 @@ import WorkspacesHeader from "./WorkspacesHeader/WorkspacesHeader";
 import WorkspacesCollapse from "./WorkspacesCollapse/WorkspacesCollapse"
 import WorkspacesLatestUpdates from "./WorkspacesLatestUpdates/WorkspacesLatestUpdates";
 import {useDispatch} from "react-redux";
-import {getWorkspacesUpdates} from "../../../actions/workspacesUpdatesActions";
+import {getWorkspacesUpdates} from "../../../api/workspacesAPI";
 
 
 const Wrapper = styled.div``;

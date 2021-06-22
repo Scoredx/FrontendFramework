@@ -1,6 +1,6 @@
 import {Dispatch} from "redux";
 import _ from 'lodash';
-import * as actionTypes from './workspacesUpdateTypes';
+import * as actionTypes from '../actions/workspacesUpdateTypes';
 import store from "../tools/store";
 import {IWorkspacesUpdate} from "../entities/workspaces-update";
 

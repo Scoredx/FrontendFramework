@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 import * as actionTypes from '../actions/userTypes';
 import { ISingleUser } from '../entities/users';
-import { getPhoto } from "./photoActions";
+import { getPhoto } from "./photoAPI";
 
 export const getUser = (id: number): Promise<ISingleUser> => {
     return fetch(`https://jsonplaceholder.typicode.com/users/${id}`)

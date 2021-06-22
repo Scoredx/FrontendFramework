@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 import {Colors} from "../../../../src/styledHelpers/Colors";
 import {FontSize} from "../../../../src/styledHelpers/FontSize";
 import {IPhoto} from "../../../entities/photo";
-import {getPhoto} from "../../../actions/photoActions";
+import {getPhoto} from "../../../api/photoAPI";
 import useDropdown from "react-dropdown-hook";
 import Filter from "./Filter";
 import _ from "lodash";

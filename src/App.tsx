@@ -1,7 +1,6 @@
-import React, {FC, useEffect, useState} from "react";
-import {BrowserRouter as Router } from "react-router-dom";
+import {FC, useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {getCurrentUser, getUsers} from "./actions/usersActions";
+import {getCurrentUser, getUsers} from "./api/usersAPI";
 
 const App: FC = () => {
     const dispatch = useDispatch();

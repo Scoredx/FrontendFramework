@@ -1,7 +1,7 @@
 import {FC, useEffect,useState} from "react";
 import styled from "styled-components";
 import {useDispatch} from "react-redux";
-import {getUsers} from "../../../actions/usersActions";
+import {getUsers} from "../../../api/usersAPI";
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import ProfileInformations from "./ProfilePanelInformations/ProfileInformations";
 import ProfileProposals from "./ProfileProposals/ProfileProposals";
