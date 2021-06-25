@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/workTypes';
-import { IWork } from '../entities/work';
+import { IWork } from '../interfaces/IWork';
 
 export interface IWorksReducer {
     works: IWork[] | null;

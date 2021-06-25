@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/workspacesUpdateTypes';
-import {IWorkspacesUpdate} from "../entities/workspaces-update";
+import {IWorkspacesUpdate} from "../interfaces/IWorkspaces-update";
 
 export interface IWorkspacesUpdatesReducer {
     workspacesUpdates: IWorkspacesUpdate[] | null;

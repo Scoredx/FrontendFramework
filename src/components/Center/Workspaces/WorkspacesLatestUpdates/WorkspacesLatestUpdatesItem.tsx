@@ -1,14 +1,14 @@
 import {FC} from "react";
 import styled from "styled-components";
-import {IWorkspacesUpdate} from "../../../../entities/workspaces-update";
+import {IWorkspacesUpdate} from "../../../../interfaces/IWorkspaces-update";
 import { Colors } from "../../../../styledHelpers/Colors";
 import { FontSize } from "../../../../styledHelpers/FontSize";
 
 const Wrapper = styled.div`
-  background: #fff;
+  background: ${Colors.white};
   border-radius: 5px;
   border: 1px solid lightgrey;
-  padding: 0.5rem 0.75rem;
+  padding: 8px 10px;
   margin-bottom: 10px;
 `;
 
@@ -29,9 +29,7 @@ const Information = styled.div`
   align-items: center;
   font-size: ${FontSize[16]};
 `;
-
 const Company = styled.div``;
-
 const Updated = styled.div``;
 
 interface WorkspacesLatestUpdatesItemProps {

@@ -49,7 +49,7 @@ const Table = styled.table`
 `;
 
 const Input = styled.input`
-  border: 1px solid lightgrey;
+  border: 1px solid ${Colors.lightGray};
 `;
 
 interface IProposal {

@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 import * as actionTypes from '../actions/userTypes';
-import { ISingleUser } from '../entities/users';
+import { ISingleUser } from '../interfaces/IUsers';
 import { getPhoto } from "./photoAPI";
 
 export const getUser = (id: number): Promise<ISingleUser> => {

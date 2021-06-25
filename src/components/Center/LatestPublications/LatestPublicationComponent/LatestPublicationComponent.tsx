@@ -1,7 +1,7 @@
 import {FC} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import {IPublication} from "../../../../entities/publication";
+import {IPublication} from "../../../../interfaces/IPublication";
 import {FontSize} from '../../../../styledHelpers/FontSize';
 import {Colors} from '../../../../styledHelpers/Colors'
 
@@ -24,7 +24,7 @@ const PublicationContent = styled.div`
 const Title = styled.h3`
   font-size: ${FontSize[20]};
   padding-bottom: 35px;
-  color:white;
+  color:${Colors.white};
   text-decoration: none;
 
 `;

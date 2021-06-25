@@ -1,7 +1,7 @@
 import {FC} from "react";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-import {IPublication} from "../../../../entities/publication";
+import {IPublication} from "../../../../interfaces/IPublication";
 import {FontSize} from '../../../../styledHelpers/FontSize';
 import {Colors} from '../../../../styledHelpers/Colors'
 

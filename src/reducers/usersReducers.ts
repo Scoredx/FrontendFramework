@@ -1,4 +1,4 @@
-import {ISingleUser} from '../entities/users';
+import {ISingleUser} from '../interfaces/IUsers';
 import * as actionTypes from '../actions/userTypes';
 
 export interface IUsersReducer {

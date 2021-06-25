@@ -2,7 +2,7 @@ import {Dispatch} from "redux";
 import _ from 'lodash';
 import * as actionTypes from '../actions/workspacesUpdateTypes';
 import store from "../tools/store";
-import {IWorkspacesUpdate} from "../entities/workspaces-update";
+import {IWorkspacesUpdate} from "../interfaces/IWorkspaces-update";
 
 
 export const getWorkspacesUpdates = (): Promise<IWorkspacesUpdate[]> => ((dispatch: Dispatch) => {
@@ -14,7 +14,6 @@ export const getWorkspacesUpdates = (): Promise<IWorkspacesUpdate[]> => ((dispat
                 const users = store.getState().users.usersList;
                 const followed = userId % 2 == 0;
                 const type: string = _.sample(['SAS', 'SARL', 'Secondary business', 'Communities', 'POA', 'Survey']) ?? 'undefined';
-
                 workspacesUpdate.author = users[userId];
                 workspacesUpdate.followed = followed;
                 workspacesUpdate.type = type;

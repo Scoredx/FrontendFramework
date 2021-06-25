@@ -1,7 +1,7 @@
 export interface IPhoto {
-    albumId: number;
     id: number;
+    albumId: number;
+    thumbnailUrl: string;
     title: string;
     url: string;
-    thumbnailUrl: string;
 }

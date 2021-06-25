@@ -1,6 +1,8 @@
 import {Dispatch, FC, SetStateAction} from "react";
 import styled from "styled-components";
-import {IFilter} from "./Entities";
+import {IFilter} from "../../../interfaces/IFilter"
+
+
 
 const Wrapper = styled.div`
     select{
@@ -21,7 +23,6 @@ interface Props {
 }
 
 const Filter: FC<Props> = (props) => {
-
     const addNew = () => {
         const newOption: IFilter = {
             id: `${Math.random()}`,
@@ -29,7 +30,6 @@ const Filter: FC<Props> = (props) => {
             operator: 'Is',
             value: ''
         };
-
         props.setOptions([...props.options, newOption]);
     }
 

@@ -1,12 +1,13 @@
-import {FC, FormEvent, useEffect, useState} from "react";
-import styled, {css} from "styled-components";
-import {Colors} from "../../../../src/styledHelpers/Colors";
-import {FontSize} from "../../../../src/styledHelpers/FontSize";
-import {IPhoto} from "../../../entities/photo";
-import {getPhoto} from "../../../api/photoAPI";
+import styled from "styled-components";
 import useDropdown from "react-dropdown-hook";
 import Filter from "./Filter";
 import _ from "lodash";
+import {FC, FormEvent, useEffect, useState} from "react";
+import { Colors} from "../../../../src/styledHelpers/Colors";
+import { FontSize } from "../../../../src/styledHelpers/FontSize";
+import { getPhoto } from "../../../api/photoAPI";
+import { IEntity } from "../../../interfaces/IEntity";
+import { IFilter } from "../../../interfaces/IFilter"
 
 const Wrapper = styled.div``;
 
@@ -75,47 +76,35 @@ const TitleFilter = styled.input`
     };
 `;
 
-interface Entity {
-    name: string;
-    address: string;
-    photo: IPhoto;
-}
-export interface IFilter {
-    id: string;
-    field: string;
-    operator: string;
-    value: string;
-}
 const Entities: FC = () => {
 
-    const companyName = [ 'Subsid Corp ltd', 'World Company SAS'];
-    const street = ['Caracas 1050'];
-    const city = ['Distrio Capital'];
-    const country = ['Venezuela'];
+    const companyName = ["Subsid Corp ltd", "World Company SAS"];
+    const street = "Caracas 1050";
+    const city = "Distrio Capital";
+    const country = "Venezuela";
 
-    const [sort, setSort] = useState('AZ');
+    const [sort, setSort] = useState("AZ");
     const [initialized, setInitialized] = useState(false);
     const [displayType, setDisplayType] = useState<number>(0);
     const [filtersChanged, setFiltersChanged] = useState(false);
-    const [followedFilter, setFollowedFilter] = useState(false);
     const [titleFilter, setTitleFilter] = useState('');
     const [filterRef, filtersOpen, toggleFilters] = useDropdown();
-    const [entities, setEntities] = useState<Entity[]>([]);
+    const [entities, setEntities] = useState<IEntity[]>([]);
     const [options, setOptions] = useState<IFilter[]>([]);
-    const [genericEntities, setGenericEntities] = useState<Entity[]>([]);
+    const [genericEntities, setGenericEntities] = useState<IEntity[]>([]);
 
     useEffect(() => {
         const fillEntities = async () => {
-            const ent: Entity[] = [];
+            const ent: IEntity[] = [];
             for (let i = 1; i <= 24; i++) {
-                const entity: Entity = {
+                const entity: IEntity = {
                     name: `${_.sample(companyName)}`,
                     address: `${street}, ${city}, ${country}`,
                     photo: await getPhoto(i),
                 };
                 ent.push(entity);
             }
-            const compare = (a: Entity, b: Entity) => {
+            const compare = (a: IEntity, b: IEntity) => {
                 if (a.name[0] < b.name[0]) return -1;
                 if (a.name[0] > b.name[0]) return 1;
                 return 0;

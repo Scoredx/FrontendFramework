@@ -1,4 +1,4 @@
-import {IWork} from "../entities/work";
+import {IWork} from "../interfaces/IWork";
 
 export const GET_YOUR_WORKS = 'GET_YOUR_WORK';
 

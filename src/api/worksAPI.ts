@@ -1,7 +1,7 @@
-import {IWork} from "../entities/work";
-import {Dispatch} from "redux";
 import * as actionTypes from '../actions/workTypes';
 import store from "../tools/store";
+import {IWork} from "../interfaces/IWork";
+import {Dispatch} from "redux";
 
 export const getWorks = (): Promise<IWork[]> => ((dispatch: Dispatch) => {
     return fetch('https://jsonplaceholder.typicode.com/comments')

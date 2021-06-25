@@ -1,4 +1,4 @@
-import { ISingleUser } from "./users";
+import { ISingleUser } from "./IUsers";
 
 export interface IPublication {
     id: number;

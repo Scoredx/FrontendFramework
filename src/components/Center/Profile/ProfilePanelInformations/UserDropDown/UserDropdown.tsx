@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import {IState} from "../../../../../reducers";
 import {IUsersReducer} from "../../../../../reducers/usersReducers";
 import {Plus} from "react-bootstrap-icons";
-import {ISingleUser} from "../../../../../entities/users";
+import {ISingleUser} from "../../../../../interfaces/IUsers";
 import { Colors } from "../../../../../styledHelpers/Colors";
 
 const Wrapper = styled.div`

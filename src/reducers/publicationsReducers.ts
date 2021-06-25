@@ -1,5 +1,5 @@
 import * as actionTypes from "../actions/publicationTypes";
-import { IPublication } from "../entities/publication";
+import { IPublication } from "../interfaces/IPublication";
 
 export interface IPublicationsReducer {
     latestPublications: IPublication[];

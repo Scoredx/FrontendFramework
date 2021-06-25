@@ -1,4 +1,4 @@
-import {IWorkspacesUpdate} from "../../../../../entities/workspaces-update";
+import {IWorkspacesUpdate} from "../../../../../interfaces/IWorkspaces-update";
 
 export class WorkspacesDataProvider {
     private readonly dataSet: IWorkspacesUpdate[] | null;

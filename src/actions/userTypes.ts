@@ -1,4 +1,4 @@
-import { ISingleUser } from '../entities/users';
+import { ISingleUser } from '../interfaces/IUsers';
 
 export const GET_USERS = 'GET_USERS';
 export const GET_CURRENT_USER = 'GET_CURRENT_USER';

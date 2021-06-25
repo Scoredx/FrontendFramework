@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 import {IState} from "../../../../reducers";
 import {IWorkspacesUpdatesReducer} from "../../../../reducers/workspacesUpdatesReducers";
 import {WorkspacesDataProvider} from "./DataProvider/WorkspacesDataProvider";
-import {IWorkspacesUpdate} from "../../../../entities/workspaces-update";
+import {IWorkspacesUpdate} from "../../../../interfaces/IWorkspaces-update";
 import { FontSize } from "../../../../styledHelpers/FontSize";
 import { Colors } from "../../../../styledHelpers/Colors";
 
@@ -45,7 +45,7 @@ const TitleFilter = styled.input`
 `;
 
 const Content = styled.div`
-  margin-top: 1rem;
+  margin-top: 14px;
 `;
 
 const WorkspacesLatestUpdates: FC = () => {

@@ -6,7 +6,6 @@ import WorkspacesLatestUpdates from "./WorkspacesLatestUpdates/WorkspacesLatestU
 import {useDispatch} from "react-redux";
 import {getWorkspacesUpdates} from "../../../api/workspacesAPI";
 
-
 const Wrapper = styled.div``;
 
 const Workspaces: FC = () => {

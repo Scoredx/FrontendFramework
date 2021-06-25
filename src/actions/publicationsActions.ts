@@ -1,6 +1,6 @@
 import _ from "lodash";
 import * as actionTypes from "./publicationTypes";
-import {IPublication} from "../entities/publication";
+import {IPublication} from "../interfaces/IPublication";
 import {Dispatch} from "redux";
 import {getPhoto} from "../api/photoAPI";
 import {getUser} from "../api/usersAPI";

@@ -4,7 +4,7 @@ import {Chat, FileRichtext, Person, Plus} from "react-bootstrap-icons";
 import {useCustomEventListener} from "react-custom-events";
 import {EditMode} from "../../../../data/ProfileAdditionalInfoData";
 import UsersDropdown from "./UserDropDown/UserDropdown";
-import {ISingleUser} from "../../../../entities/users";
+import {ISingleUser} from "../../../../interfaces/IUsers";
 import AttachmentForm from "./AttachmentForm";
 import { Colors } from "../../../../styledHelpers/Colors";
 import { FontSize } from "../../../../styledHelpers/FontSize";
